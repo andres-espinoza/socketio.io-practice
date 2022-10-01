@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Websockets</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <section>
+          <h1>Hello There!</h1>
+          <h2>Please enter your product</h2>
+          <form id="product-form">
+            <input type="text" name="title" id="product-title"
+              placeholder="Product Title" required>
+            <input type="number" name="price" id="product-price"
+              placeholder="Price" required>
+            <input type="text" name="thumbnail" id="product-thumbnail"
+              placeholder="URL Thumbnail" required>
+            <input type="submit" class="submit" value="Send Product">
+          </form>
+        </section>
+        <section id="product-table"></section>
+      </div>
+      <div class="box">
+        <section>
+          <h2>You can chat too</h2>
+          <form id="chat-form">
+            <input type="text" name="email" id="chat-email"
+              placeholder="Your email: example@email.com" required>
+            <input type="text" name="message" id="chat-message"
+              placeholder="Your Message" required>
+            <input type="submit" class="submit" value="Send Message">
+          </form>
+          <section id="messages-table"></section>
+        </section>
+      </div>
+      <script type="module" src="./index.js"></script>
+    </body>
+  </html>

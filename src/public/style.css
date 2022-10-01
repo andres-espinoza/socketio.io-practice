@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 2.369rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.777rem;
+  font-weight: 400;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.box {
+  padding: 2rem;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+section, form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+form {
+  width: 40%;
+  gap: 1rem;
+}
+
+form > input {
+  padding: 0.3rem;
+}
+
+.submit {
+  cursor: pointer;
+}
+
+table {
+  background-color: grey;
+  border-radius: 3px;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  width: 33%;
+}
+
+tbody {
+  background-color: white;
+}
+
+.table_product_name {
+  text-align: left;
+}
+
+.table_cell_image {
+  text-align: center;
+}
+
+.table_image {
+  height: 3rem;
+  width: auto;
+}
+
+.table-messages {
+  width: max-content;
+  background-color: white;
+}
+.chat-message-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  width: max-content;
+}

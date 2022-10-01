@@ -1,0 +1,40 @@
+// Common entries for all configs
+var common = Object.assign({}, {
+  context: srcPath,
+  resolve: {
+    modules: ['node_modules', 'src'],
+    extensions: ['*']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      }
+    ]
+  },
+  plugins: [
+    new BabiliPlugin()
+  ]
+});
+
+// Server.js config
+// Output to dist/client/
+var serverConfig = Object.assign({}, common, {
+  entry: './server/index.js',
+  output: {
+    path: distPath,
+    filename: 'server.min.js'
+  },
+  target: 'node',
+  node: {
+    __dirname: false,
+    __filename: false
+  },
+  externals: nodeExternals()
+});
+
+
+using env
+var mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';

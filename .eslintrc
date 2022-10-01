@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "commonjs": false
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+ "plugins": ["@typescript-eslint", "import"],
+  "extends": [
+    "airbnb-typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "comma-dangle": "off",
+    "max-len": "off",
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-return-assign": "off",
+    "object-curly-newline": "off",
+    "no-debugger": "off",
+    "import/extensions": 0,
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "no-trailing-spaces": "error",
+    "eol-last": "error",
+    "import/newline-after-import": ["error", { "count": 1 }]
+  },
+  "settings": {
+    "import/extensions": 0,
+    "import/resolver": {
+        "node": {
+            "paths": ["src"],
+            "extensions": [".js", ".ts", ".d.ts", ".tsx"]
+  }}}
+}
