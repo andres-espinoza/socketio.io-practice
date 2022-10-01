@@ -7,7 +7,7 @@ interface IClientProduct {
   price: string;
   thumbnail: string;
 }
-const clientSocket = io('http://localhost:8080');
+const clientSocket = io();
 
 const productForm = document.querySelector('#product-form') as HTMLFormElement;
 const productList = document.querySelector('#product-table') as HTMLElement;

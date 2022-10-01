@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "./src/server.ts",
+  "engines": { "node": "16.x" },
   "scripts": {
-    "build-web-js": "webpack",
+    "build": "webpack",
     "dev": "ts-node-dev .",
     "start": "ts-node ."
   },

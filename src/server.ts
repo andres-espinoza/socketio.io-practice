@@ -39,7 +39,7 @@ socketServer.on('disconnect', () => {
   socketServer.removeAllListeners();
 });
 
-const PORT = process.env.NODE_ENV === 'production' ? 1000 : 8080;
+const PORT = process.env.PORT || 3000;
 httpServer.listen(PORT, () => {
   console.log(`Http Server listening port: http://localhost:${PORT}`);
 });

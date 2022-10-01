@@ -3,13 +3,10 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var mode =  process.env.NODE_ENV === 'production' ? 'production' : 'development';
-var watch = process.env.NODE_ENV === 'development';
-
 var clientConfig = Object.assign({}, {
   entry: path.join(__dirname, '/src/public/index.ts'),
-  mode: mode,
-  watch: true,
+  mode: 'production',
+  watch: false,
   output: {
     path: path.join(__dirname, '/src/public'),
     filename: 'index.js',
@@ -37,8 +34,8 @@ var clientConfig = Object.assign({}, {
 
 var serverConfig = Object.assign({}, {
   entry: path.join(__dirname, '/src/server.ts'),
-  mode: mode,
-  watch: watch,
+  mode: 'development',
+  watch: false,
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'server.js'
