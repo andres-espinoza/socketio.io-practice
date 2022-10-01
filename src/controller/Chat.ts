@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 import ChatMessage, { IChatMessage } from '../model/ChatMessage';
 
-const thisPath = __dirname.split('\\');
-thisPath.pop();
-const filePathChatMessages = `${thisPath.join('/')}/public/files/chatMessages.json`;
+// const thisPath = __dirname.split('\\');
+// thisPath.pop();
+const filePathChatMessages = './src/public/files/chatMessages.json';
 
 class Chat {
   FileName: string;
